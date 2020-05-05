@@ -1,0 +1,53 @@
+.clock {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 10px solid #985c1c;
+  background: linear-gradient(137deg, black 0%, #e9b61a 43%); }
+  .clock__center-circle {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    background: radial-gradient(circle, #e9b61a 0%, black 78%);
+    border-radius: 50%; }
+  .clock__arrow {
+    position: absolute;
+    width: 15px;
+    -webkit-animation: arrow-spin 60s linear infinite;
+            animation: arrow-spin 60s linear infinite; }
+    .clock__arrow::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 50%;
+      width: 100%; }
+  .clock__arrow--sec {
+    height: 500px; }
+    .clock__arrow--sec::after {
+      background-color: #de5f1b;
+      border-radius: 30px; }
+  .clock__arrow--min {
+    height: 300px;
+    -webkit-animation-duration: 3600s;
+            animation-duration: 3600s; }
+    .clock__arrow--min::after {
+      background-color: #942222;
+      border-radius: 30px; }
+
+@-webkit-keyframes arrow-spin {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+@keyframes arrow-spin {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=main.css.map */
